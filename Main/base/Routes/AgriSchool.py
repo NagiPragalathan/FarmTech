@@ -66,7 +66,7 @@ def create_page(Search):
     search = Search
     link = url(search)
     links = ""
-    path = "C:/Users/NagiPragalathan/Desktop/SyudyKit/StudyKit/templates/cources/school_education"
+    path = "C:/Users/NagiPragalathan/Desktop/FarmTech/Main/templates/cources/school_education"
     contant = Cscrping(search,5,"p")
     head = Cscrping(search,18,"h1")
     Code = ""
@@ -335,4 +335,4 @@ def create_page(Search):
 def Agri(request):
     inp_value = request.GET.get('inp') 
     create_page(inp_value)
-    return render(request, 'cources\school_education\simple.html')
+    return render(request, 'cources/school_education/simple.html')
