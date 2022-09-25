@@ -7,6 +7,16 @@
 2. Run `pip install -r requirements.txt` to install the required dependencies
 3. Run `streamlit run farmtech.py` and copy the URL to your web browser
 
+## How to Run Locally (Windows)
+
+1. Clone this repository
+2. Install Anaconda/Miniconda, then create a conda environment
+3. Activate the virtual environment, then run `conda install -c conda-forge --file requirements.txt` to install the required dependencies
+4. open two terminals 
+5. one for run Django framework. `cd Main` and `python manage.py runserver`
+6. another one for streamlit. 'cd farmtech` and Run `streamlit run farmtech.py` 
+7. And copy the URL`http://127.0.0.1:8000/` to your web browser
+
 ## Abstract
 Farmtech is a tool that aims to help the Tamilnadu farming community optimize crop production. The global demand for food greatly outstrips that for supply, and there is an urgent need for interventions to address this balance. 
 
@@ -29,16 +39,20 @@ By leveraging on datasets from and outside Amazon Sustainability Data Initiative
 2. **Increasing income from enhanced crop yields for rural farming communities** that typically have little access to information to make farming more efficient (Goal 1: No Poverty)
 3. **Tailoring the solution for the Tamilnadu continent.** India is amongst the worst hit by climate change (Adepoju, 2021), with 346 million people facing severe food insecurity, a 20% increase from 2021 (Mersie, 2022). Farmtech helps to indirectly address various inequalities such as income and food availability (Goal 10: Reduced Inequalities)
 
+## IBMz Datathon
+
+![image](https://user-images.githubusercontent.com/88650559/192129082-7f7dd579-c3e4-4968-9d66-716e573bbaf0.png)
+
+It was a IBMz datathon project. So we have worked on the linuxOne tool to accomplish our project in Jupiter Notebook. And we thanks Shooting Stars for the wonderful oppurtunity to our us.
+Ref: https://developer.ibm.com/components/ibm-linuxone/
+
+
 ## Target Users
 
 Farmtech targets the Tamilnadu continent, due to the following reasons:
-1. **India is amongst the worst hit by food insecurity**, as seen in Figure 2 
+1. **India is amongst the worst hit by food insecurity**
 
-_Figure 2: FAO Food Insecurity Map (Food and Agriculture Organization of the India, 2022)_
-
-2. **Tamilnadu agriculture sector is one of the least efficient**, as seen in Figure 3. Having more access to information could help them in becoming more efficient 
-
-_Figure 3: Agriculture value added per worker (India, 2022)_
+2. **Tamilnadu agriculture sector is one of the least efficient**. Having more access to information could help them in becoming more efficient 
 
 3. **Larger impact of rising food prices on lower income countries**, since a larger portion of their income is spent on food (The World Bank, 2022). Approximately 45% and 60% of total household consumption expenditure was spent on food for Poor peoples, respectively, as compared to about 15% for the US (Kavanagh, 2019). The Food and Agriculture Organization’s (FAO’S) Food Price Index rose by 55.2% between May 2020 and February 2022 (Fulfill, 2022). With improved crop yields from using Farmtech, it could help to lower food prices for the Tamilnadu community
 
@@ -59,15 +73,15 @@ On the Settings page, the user is able to navigate and click on their desired lo
 
 ![image](https://user-images.githubusercontent.com/88650559/192111163-2f9f22d2-22c8-4137-ab23-95d212843f90.png)
 
-_Figure 4: Location selector_ 
+_Figure 1: Location selector_ 
 
 ### Environment Information
 
-After selecting the location, the user proceeds to the Farmtech dashboard. One of the features is a heatmap to display the existing conditions within a 30m by 30m plot based on the selected location (Figure 5). 
+After selecting the location, the user proceeds to the Farmtech dashboard. One of the features is a heatmap to display the existing conditions within a 30m by 30m plot based on the selected location (Figure 2). 
 
 <img src="./images/land-condition-heatmap.png" width="450"/>
 
-_Figure 5: Land condition heatmap and growable land metrics_
+_Figure 2: Land condition heatmap and growable land metrics_
 
 The darker the color, the higher the condition. The condition can be selected in the drop down above the map, and they consist of:
 - Fertility Capability Classification (“FCC”)
@@ -82,40 +96,40 @@ Beside the choropleth map, the following histograms provide the user with a high
 
 <img src="./images/land-condition-visualizations.png" width="750"/>
 
-_Figure 6: Visualizations on land conditions_
+_Figure 3: Visualizations on land conditions_
 
-Below the land condition heatmap, there are 2 metrics available (shown at the bottom of Figure 3):
+Below the land condition heatmap, there are 2 metrics available:
 - **Growable land**: This indicates the percentage of land in the selected area that has ideal land conditions
-- **Growable land (after modifications)**: This indicates the forecasted percentage of land in the selected area that is likely to have ideal land conditions after proposed modifications are made (refer to Figure 7 below). 
+- **Growable land (after modifications)**: This indicates the forecasted percentage of land in the selected area that is likely to have ideal land conditions after proposed modifications are made (refer to Figure 4 below). 
 	
 These metrics could help users identify a plot of land that inherently already is ideal for growing crops, so as to reduce the amount of modifications required. 
 
-From there, the dashboard shows proposed modifications that the user can make to improve the land conditions (Figure 7). References are also provided should the user require more relevant information. 
+From there, the dashboard shows proposed modifications that the user can make to improve the land conditions (Figure 4). References are also provided should the user require more relevant information. 
 
 <img src="./images/proposed-modifications.png" width="750"/>
 
-_Figure 7: Proposed modifications_
+_Figure 4: Proposed modifications_
 
 ### Weather Information
-Forecasted rainfall and monthly temperatures in the selected location for the next few months are also shared (Figure 8). This could help the user in planning, as different crops may require different amounts of water and temperatures.
+Forecasted rainfall and monthly temperatures in the selected location for the next few months are also shared (Figure 5). This could help the user in planning, as different crops may require different amounts of water and temperatures.
 
 <img src="./images/weather-forecasts.png" width="750"/>
 
-_Figure 8: Forecasted rainfall and monthly temperature_
+_Figure 5: Forecasted rainfall and monthly temperature_
 
 ### Crop Recommendations
 Based on the soil’s fertility and weather, a set of crops are recommended based on the  highest suitability. These recommendations aim to provide the users a narrowed down list of crops that are highly likely to grow with minimal adjustments needed. Users are able to expand on the crop-specific adjustments to get tips on how to effectively remedy them in order to enhance growing conditions.
 
 ![image](https://user-images.githubusercontent.com/88650559/192113412-4e83ff3c-676c-4a57-ae39-7b10f40c95fe.png)
 
-_Figure 9: Crop recommendations and suggested adjustments_
+_Figure 6: Crop recommendations and suggested adjustments_
 
 ### Places to Purchase Farming Supplies
 Farmers may benefit from this feature should they want to act on the proposed modifications and adjustments. Hence, Farmtech also provides recommended farming and fertilizer suppliers that are near the selected location. 
 
 ![image](https://user-images.githubusercontent.com/88650559/192111224-d4a16267-0354-4e41-9193-788e45e2d84b.png)
 
-_Figure 10: Nearby farming and fertilizer suppliers_
+_Figure 7: Nearby farming and fertilizer suppliers_
 
 ## Datasets Used
 In building Farmtech, we used a combination of datasets from different sources and also augmented some of our own that we had built through research.
@@ -141,7 +155,7 @@ Soil properties extracted from iSDAsoil include:
 ### Weather Data
 Historical weather information for each of the 54 Tamilnadu countries was pulled from the World Bank Climate Change Knowledge Portal. These datasets contained monthly aggregations of  the actual recorded temperature and rainfall levels in each country, for a period of 120 years from 1901 to 2021 respectively. We then combined all of these separate datasets together through a series of preprocessing steps. The code used to perform this data preprocessing can be found in the notebooks folder.
 
-The cleaned and consolidated datasets can also be found in the data folder under africa_rainfall_cleaned.csv and africa_temp_cleaned.csv respectively.
+The cleaned and consolidated datasets can also be found in the data folder under India_rainfall_cleaned.csv and India_temp_cleaned.csv respectively.
 
 ### Crop Data
 Data on the ideal conditions to grow certain crops was not readily attainable. Hence, we curated our own crop attributes dataset through research by reading through pages from the Food and Agriculture Organization of the United Nation. We also referenced the Crop Recommendation Dataset hosted on Kaggle.
@@ -155,9 +169,9 @@ The list of farming and fertilizer suppliers was compiled based on a few sources
 
 | Source                                                                    | Link                                                            | 
 |---------------------------------------------------------------------------|-----------------------------------------------------------------|
-| Fertilizer Association of Southern Africa (Fertasa) - Directory List      | http://www.fertasa.co.za/member-directory/directory-list/       | 
-| Kenyan website containing list of fertilizer companies in Kenya           | https://victormatara.com/list-of-fertilizer-companies-in-kenya/ |
-| East Africa’s leading business directory and tender notification platform | https://eastafricatenders.com/businesses/fertilizer/            |
+| Fertilizer Association of India - Directory List      | http://www.fertasa.co.za/member-directory/directory-list/       | 
+| TamilNadu website containing list of fertilizer companies in TamilNadu           | https://tnpcb.gov.in/pdf/17Category/FertilizerUnits.pdf |
+| Chennai leading business directory and tender notification platform | https://tntenders.gov.in/nicgep/            |
 | Searches on Google Maps                                                   | Google Maps                                                     |
 
 _Table 2: Sources for farming and fertilizer suppliers_
@@ -220,7 +234,7 @@ Desirability, feasibility, and viability is the holy trinity for innovation. Ide
 The following summarizes the considerations for each of the criteria, some of which have been mentioned throughout the report:
 
 - Desirability
-  - Africa is amongst the **worst hit by food insecurity**, and the information provided by Farmtech could help educate the Tamilnadu farming community to enhance their crop yields 
+  - India is amongst the **worst hit by food insecurity**, and the information provided by Farmtech could help educate the Tamilnadu farming community to enhance their crop yields 
   - The Tamilnadu agriculture sector is one of the least efficient, and having more access to information could help them in becoming more efficient 
   - For lower income countries, a larger portion of their income is spent on food. The rising food prices further challenges food security for them. Improved crop yields from using Farmtech could help to keep food prices low for the Tamilnadu community
   - Tamilnadu governments, agricultural ministries, and international aid groups could use the tool to better understand existing and ideal conditions, and provide necessary support to the farmers
@@ -259,7 +273,7 @@ To be able to compare data in the same manner, conversion into a common unit was
 ## Future Work
 Farmtech is built with scalability in mind. It can be scaled up in several ways, and most times, the limiting factor is the availability of relevant data. 
 
-### Expanding Target Region Outside Africa
+### Expanding Target Region Outside India
 As long as relevant datasets for other regions are available, the tool can be expanded to cater to those regions as well. An accompanying feature could be having Farmtech available in different languages as well. 
 
 ### Increasing Number of Variables for Crop Recommendations
