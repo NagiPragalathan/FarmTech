@@ -1,0 +1,44 @@
+.card {
+    background: white;
+    padding: $spacing-lg;
+    border-radius: $radius-sm;
+
+    h3 {
+        font-size: $font-size-lg;
+    }
+
+    .card-price {
+        .price {
+            font-size: 2.5rem;
+            font-weight: $font-bold;
+            color: $color-black;
+        }
+        .term {
+            font-size: $font-size-sm
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+
+        li {
+            padding-bottom: $spacing-sm;
+            font-size: $font-size-sm;
+            svg {
+                color: #88C047;
+                width: 20px;
+                position: relative;
+                top: 4px;
+                margin-right: $spacing-sm;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $screen-sm) {
+    .card {
+        margin-top: $spacing-md;
+    }
+  }

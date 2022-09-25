@@ -1,0 +1,590 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <style>
+        body {
+            background: #ebeef2;
+        }
+
+        h4,
+        
+        label {
+            color: #fff;
+        }
+
+        /*nav part start*/
+        nav {
+            height: 60px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,.75);
+            text-decoration: none;
+            font-size: 30px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+        nav a:hover{
+            color: #ffff;
+        }
+
+        /*nav part end*/
+        .login--wrapper {
+            display: flex;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            max-width: 320px;
+            margin: 75px auto 0 auto;
+        }
+
+        /*form part start*/
+        .width{
+            max-width: 450px;
+            margin: 75px auto 0 auto;
+        }
+        form {
+            background: #ffff;
+            padding: 30px;
+            
+        }
+
+        label {
+            color: #000;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .input {
+            margin-bottom: 10px;
+        }
+
+        .input .text {
+            height: 45px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .submit input {
+            background: rgb(33,37,41)!important;
+            color: #ffff;
+            width: 100%;
+            height: 45px;
+            border: 1px solid rgb(33,37,41)!important;
+        }
+
+        .not_account {
+            margin-top: 10px;
+        }
+
+        .not_account a {
+            text-decoration: none;
+        }
+
+        .or-login {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .buttons .fb {
+            width: 100%;
+            border: none;
+        }
+
+        .buttons .facebook {
+            background: #30759d;
+            padding: 6px 22px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .facebook img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .buttons .facebook .login-fb {
+            padding: 4px 10px;
+            font-size: 15px;
+            color: #ffff;
+        }
+
+        .buttons .facebook:hover {
+            background: #1e6995;
+        }
+
+        .buttons .gmail {
+            width: 100%;
+            border: 1px solid #a09f9f;
+            margin-top: 10px;
+        }
+
+        .buttons .google {
+            background: #ffff;
+            padding: 6px 22px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .google img {
+            width: 34px;
+            height: 34px;
+        }
+
+        .buttons .google .login-gmail {
+            padding: 4px 10px;
+            font-size: 15px;
+            color: #757575;
+        }
+
+        .buttons .gmail:hover p {
+            color: #000;
+        }
+
+
+        .buttons .apple_id {
+            width: 100%;
+            border: 1px solid #a09f9f;
+            margin-top: 10px;
+        }
+
+        .buttons .apple {
+            background: #000;
+            padding: 8px 24px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .apple img {
+            width: 20px;
+            height: 24px;
+        }
+
+        .buttons .apple .login-apple {
+            padding: 0 10px;
+            font-size: 15px;
+            color: #ffff;
+        }
+
+        /*form part end*/
+        .check {
+            margin-top: 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .below-form1 {
+            margin-top: 60px;
+            text-align: center;
+            color: #999;
+        }
+
+        .below-form1 a {
+            text-decoration: none;
+        }
+
+
+        .select-pos {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .select-pos button {
+            border: none;
+            background: transparent;
+        }
+
+        .select-pos input {
+            width: 25px;
+            height: 25px;
+        }
+
+        .select-pos label {
+            position: relative;
+            top: -5px;
+            font-size: 15px;
+            padding-left: 10px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .input {
+            margin-bottom: 10px;
+        }
+
+        .input .text {
+            height: 45px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .submit input {
+            background: #409CD1;
+            color: #ffff;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #409CD1;
+        }
+
+        .not_account {
+            margin-top: 10px;
+        }
+
+        .not_account a {
+            text-decoration: none;
+        }
+
+        .or-login {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .buttons .fb {
+            width: 100%;
+            border: none;
+        }
+
+        .buttons .facebook {
+            background: #30759d;
+            padding: 6px 22px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .facebook img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .buttons .facebook .login-fb {
+            padding: 4px 10px;
+            font-size: 15px;
+            color: #ffff;
+        }
+
+        .buttons .facebook:hover {
+            background: #1e6995;
+        }
+
+        .buttons .gmail {
+            width: 100%;
+            border: 1px solid #a09f9f;
+            margin-top: 10px;
+        }
+
+        .buttons .google {
+            background: #ffff;
+            padding: 6px 22px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .google img {
+            width: 34px;
+            height: 34px;
+        }
+
+        .buttons .google .login-gmail {
+            padding: 4px 10px;
+            font-size: 15px;
+            color: #757575;
+        }
+
+        .buttons .gmail:hover p {
+            color: #000;
+        }
+
+
+        .buttons .apple_id {
+            width: 100%;
+            border: 1px solid #a09f9f;
+            margin-top: 10px;
+        }
+
+        .buttons .apple {
+            background: #000;
+            padding: 8px 24px;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .buttons .apple img {
+            width: 20px;
+            height: 24px;
+        }
+
+        .buttons .apple .login-apple {
+            padding: 0 10px;
+            font-size: 15px;
+            color: #ffff;
+        }
+
+        .check {
+            margin: 12px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .below-form2 {
+            font-size: 12px;
+            text-align: center;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .below-form2 a {
+            text-decoration: none;
+        }
+
+        /*form part end*/
+        .main-footer {
+            color: #999;
+            margin: 35px 0;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .main-footer a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--nav part for login start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="{% url 'login' %}">
+                WasteFood Management & Donation
+            </a>
+        </div>
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <!--nav part for login start-->
+    <div class="container" style="margin-bottom: 50px;">
+
+        {% if page == 'login' %}
+        <div class="width">
+            <form id="loginUser" method="post" name="loginUser" role="form" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="title">
+                    <p>Log in</p>
+                </div>
+                <div class="input">
+                    <input class="text" type="text" id="loginUsername" name="loginUsername" placeholder="Username"
+                        autocomplete="off" Required>
+                </div>
+                <div class="input">
+                    <input class="text" type="password" id="loginPass" name="loginPass"
+                        placeholder="Enter your Password" Required>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Log in">
+                </div>
+                <div class="not_account">
+                    Don't have any account yet?<a href="{% url 'signup' %}">Sign up here</a>
+                </div>
+                <div class="or-login">
+                    <p>or</p>
+                </div>
+                <div class="buttons">
+                    <button class="fb" formaction="https://www.facebook.com/" style="background: #1e6995;">
+                        <div class="facebook">
+                            <img src="../static/Picture/fb.png" alt="">
+                            <div class="login-fb">
+                                <p>Log in with Facebook</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="gmail"
+                        formaction="https://accounts.google.com/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="background: #fff;">
+                        <div class="google">
+                            <img src="../static/Picture/google-logo-9822.png" alt="">
+                            <div class="login-gmail">
+                                <p>Log in with Google</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="apple_id" formaction="https://appleid.apple.com/" style="background: #000;">
+                        <div class="apple">
+                            <img src="../static/Picture/Apple_logo.png" alt="">
+                            <div class="login-apple">
+                                <p>Log in with Apple</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="notification" checked>
+                    <label for="notification">Send me special deals to my inbox</label>
+                </div>
+                
+                
+                <!--form-part end-->
+            </form>
+            <div class="below-form" style="text-align: center;">
+                    By logging in, you accept our <a href="#">Terms of Use</a>, and <a href="#"> Privacy</a>& <a
+                        href="#">Cookies</a> Statement.
+            </div>
+        </div>
+
+
+        {% else %}
+
+        <div class="width">
+            <form id="apply-from" method="post" id="signupUser" name="signupUser" role="application"
+                action="{% url 'signup' %}">
+                {% csrf_token %}
+                <!--link your home page-->
+                <div class="title">
+                    <p>Sign Up</p>
+                </div>
+                <div class="buttons">
+                    <button class="fb" formaction="https://www.facebook.com/" style="background: #30759d;">
+                        <div class="facebook">
+                            <img src="../static/Picture/fb.png" alt="">
+                            <div class="login-fb">
+                                <p>Log in with Facebook</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="gmail" style="background: #fff;"
+                        formaction="https://accounts.google.com/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                        <div class="google">
+                            <img src="../static/Picture/google-logo-9822.png" alt="">
+                            <div class="login-gmail">
+                                <p>Log in with Google</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="apple_id" style="background: #000;" formaction="https://appleid.apple.com/">
+                        <div class="apple">
+                            <img src="../static/Picture/Apple_logo.png" alt="">
+                            <div class="login-apple">
+                                <p>Log in with Apple</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="or-login">
+                    <p>or</p>
+                </div>
+
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value=""
+                            required="">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value=""
+                            required="">
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-12 ">
+                        <label for="username" class="form-label"> Username</label>
+                        <input type="text" class="form-control" id="sign_username" name="sign_username"
+                            placeholder="Enter a username" value="" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="signup_email" name="signup_email"
+                        placeholder="you@example.com" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                <div class="form-floating mb-3 my-3">
+                    <input type="password" class="form-control rounded-4" id="pass1" name="pass1" placeholder="Password"
+                        required>
+                    <label for="floatingPassword">Choose your password</label>
+                </div>
+
+                <div class="form-floating mb-3 my-3">
+                    <input type="password" class="form-control rounded-4" id="pass2" name="pass2" placeholder="Password"
+                        required>
+                    <label for="floatingPassword">Confirm your password</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="notification" checked>
+                    <label for="notification">Send me special deals to my inbox</label>
+                </div>
+
+                <div class="below-form">
+                    By logging in, you accept our <a href="#">Terms of Use</a>, and <a href="#"> Privacy</a>& <a
+                        href="#">Cookies</a> Statement.
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Sign Up">
+                </div>
+
+            </form>
+            <div class="main-footer">
+                Already Have an account?<a href="{% url 'login' %}">Log in here</a>
+            </div>
+        </div>
+        <!--form-part end-->
+
+        {% endif %} 
+    </div>
+</body>
+
+</html>

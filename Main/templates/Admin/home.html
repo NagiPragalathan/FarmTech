@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../static/CSS/home.css"> 
+    <link rel="stylesheet" href="../static/CSS/responsive.css"> -->
+    <link rel="icon" type="image/x-icon" href="../static/Picture/Waste Food management & Donation-logos_whiteooo.png">
+    <title>Hungry Killer</title>
+<!--   
+    css start-->
+    <style>
+        /*universal end*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .margin-left {
+            margin-left: auto !important;
+        }
+
+        .contain-width {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /*universal end*/
+
+        /*navbar start*/
+        .navbar a img {
+            height: 60px;
+        }
+        .navbar-dark .navbar-nav .nav-link{
+            color: rgba(255,255,255,.75);
+            font-weight: 600;
+        }
+        .navbar-dark .navbar-nav .nav-link:hover{
+            color: #ffff;
+        }
+        /*navbar end*/
+
+        /*save live part start*/
+        .save-live-part {
+            background: #F1F4F8;
+        }
+
+        .save-live-part .contain-width {
+            padding: 50px;
+        }
+
+        .save-live-part .contain-width .col-7 {
+            text-align: left;
+        }
+
+        .save-live-part .contain-width .col-7 .header-part {
+            margin-bottom: 20px;
+        }
+
+        .save-live-part .contain-width .col-7 .below-header {
+            font-size: 40px;
+            background-color: #e43a47;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .save-live-part .contain-width .col-7 p {
+            line-height: 2rem;
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .save-live-part .contain-width .col-7 a {
+            text-decoration: none;
+            background-color: #e43a47;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .save-live-part .contain-width .col-5 {
+            text-align: right;
+        }
+
+        .save-live-part img {
+            justify-content: end;
+            width: 80%;
+            border-radius: 50%;
+        }
+
+        /*save live part end*/
+
+        /*Abou start*/
+        .about .row {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .about .row h2 {
+            margin: 20px 0;
+        }
+
+        .about .display {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "part_1 part_2 part_3 part_4";
+            grid-column-gap: 20px;
+        }
+
+        .about .display .part_1 {
+            grid-area: part_1;
+        }
+
+        .about .display .part_2 {
+            grid-area: part_2;
+        }
+
+        .about .display .part_3 {
+            grid-area: part_3;
+        }
+
+        .about .display .part_4 {
+            grid-area: part_4;
+        }
+
+        .about .display img {
+            width: 245px;
+            height: 245px;
+        }
+
+        .about .display .part .below {
+            margin-top: 10px;
+        }
+
+        .about .row span {
+            text-align: center;
+        }
+
+        .about .row span a {
+            text-decoration: none;
+            border: 2px solid #000;
+            padding: 15px;
+            border-radius: 25px;
+            color: #000;
+            transition: 0.5s;
+        }
+
+        .about .row a:hover {
+            color: #fff;
+            background-color: #e43a47;
+            border-color: #e43a47;
+        }
+
+        /*about end*/
+
+        /*Gallery start*/
+        .gallery {
+            background: #F1F4F8;
+        }
+
+        .gallery .row {
+            padding-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .gallery .contain-width .image img {
+            width: 270px;
+            height: 190px;
+            transition: 0.5s;
+        }
+
+        .gallery .contain-width .image {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: "pic1 pic2 pic3 pic4"
+                "pic5 pic6 pic7 pic8"
+                "pic9 pic10 pic10 pic10";
+            grid-gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        .gallery .contain-width .image .pic1 {
+            grid-area: pic1;
+        }
+
+        .gallery .contain-width .image .pic2 {
+            grid-area: pic2;
+        }
+
+        .gallery .contain-width .image .pic3 {
+            grid-area: pic3;
+        }
+
+        .gallery .contain-width .image .pic4 {
+            grid-area: pic4;
+        }
+
+        .gallery .contain-width .image .pic5 {
+            grid-area: pic5;
+        }
+
+        .gallery .contain-width .image .pic6 {
+            grid-area: pic6;
+        }
+
+        .gallery .contain-width .image .pic7 {
+            grid-area: pic7;
+        }
+
+        .gallery .contain-width .image .pic8 {
+            grid-area: pic8;
+        }
+
+        .gallery .contain-width .image .pic9 {
+            grid-area: pic9;
+        }
+
+        .gallery .contain-width .image .pic10 {
+            grid-area: pic10;
+        }
+
+        .gallery .contain-width .image img:hover {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        /*Gallery End*/
+
+        /*contact start*/
+        .main-part {
+            background: #F5FAF9;
+        }
+
+        main {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+
+        }
+
+        main p {
+            color: rgb(15, 15, 15);
+        }
+
+        main .main-head {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        main .main-head p {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        main .main-hr {
+            max-width: 200px;
+            margin: 0 auto;
+            height: 3px;
+            margin-top: 20px;
+        }
+
+        main .main-internal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-template-areas: "detail form-part";
+            max-width: 1000px;
+            margin: 100px auto 0 auto;
+        }
+
+        main .main-internal .detail {
+            grid-area: detail;
+        }
+
+        main .main-internal .form-part {
+            grid-area: form-part;
+            text-align: -moz-right;
+        }
+
+        main .main-internal .form-part .col-md-6 {
+            width: 100%;
+        }
+
+        main #cf-submit .submit-btn {
+            background: #ffffff;
+            padding: 5px 15px;
+            border: 1px solid #000;
+            color: #000;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        main #cf-submit .submit-btn:hover {
+            background: #e43a47;
+            color: #ffff;
+            border-color: #e43a47;
+        }
+
+        .check {
+            margin: 12px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .below-form {
+            font-size: 12px;
+            text-align: center;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .below-form a {
+            text-decoration: none;
+        }
+
+        /*contact end*/
+
+        /*motive start*/
+        .motive{
+            background-color: #F1F4F8;
+            padding: 150px 0;
+        }   
+        .motive .contain-width h3{
+            font-weight: 400;
+            padding: 30px 0;
+        }
+        .motive .contain-width p{
+            color: rgba(10,10,10,0.65);
+        }
+        .motive .contain-width{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "waste hunger environment";
+            text-align: center;
+        }
+        .motive .contain-width .waste{
+            grid-area: waste;
+        }
+        .motive .contain-width .hunger{
+            grid-area: hunger;
+        }
+        .motive .contain-width .environment{
+            grid-area: environment;
+        }
+        /*motive end*/
+
+         /*footerpart start*/
+         footer {
+            background: #212529;
+
+        }
+
+        footer hr {
+            color: #ffff;
+        }
+
+        footer .footer-internal {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 2fr 2fr;
+            grid-template-areas: "part1 part2 part3 part4";
+
+        }
+
+        footer h2 {
+            color: #ffff;
+            font-size: 20px;
+            padding-bottom: 30px;
+            font-weight: 700;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        footer .footer-internal .part1 {
+            grid-area: part1;
+        }
+
+        footer .footer-internal .part1 img {
+            width: 140px;
+            height: 40px;
+        }
+
+        footer .footer-internal .part2 {
+            grid-area: part2;
+        }
+
+        footer .footer-internal .part2 img {
+            height: 50px;
+            width: 180px;
+        }
+
+        footer .footer-internal .part3 {
+            grid-area: part3;
+        }
+
+        footer .footer-internal .part4 {
+            grid-area: part4;
+        }
+
+        footer .final-part p {
+            text-align: center;
+            color: #ffff;
+            padding-bottom: 20px;
+        }
+
+        /*footer part end*/
+
+        /*responsive start*/
+@media only screen and (max-width: 1200px){
+    .contain-width{
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .display{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "part_1 part_2 part_3" "part_4 part_4 part_4";
+        
+    }
+    .about .display .part_4 img{
+        max-width: 325px;
+        margin: 0 auto;
+    }
+    .about .display img{
+        width: 325px;
+        height: 280px;
+    }
+    .gallery .contain-width .image{
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "pic1 pic2 pic3"
+                              "pic4 pic5 pic6"
+                              "pic7 pic8 pic9" "pic10 pic10 pic10";
+        grid-gap: 20px;
+        padding-bottom: 50px;
+    }
+    .gallery .contain-width .image img {
+        width: 345px;
+        height: 230px;
+    }
+    .gallery .contain-width .image .pic10 img {
+        max-width: 345px;
+        margin: 0 auto
+    }
+}
+@media only screen and (max-width: 1100px){
+    .contain-width{
+        max-width: 992px;
+        margin: 0 auto;
+    }
+    .about .display {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "part_1 part_2"
+            "part_3 part_4";
+    }
+    .about .display img {
+        width: 390px;
+        height: 340px;
+    }
+    .gallery .contain-width .image {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "pic1 pic2"
+            "pic3 pic4"
+            "pic5 pic6"
+            "pic7 pic8"
+            "pic9 pic10";
+        grid-gap: 20px;
+        padding-bottom: 50px;
+    }
+    .gallery .contain-width .image img {
+        width: 390px;
+        height: 270px;
+        
+    }
+    .gallery .contain-width .image .rooted{
+        margin: 0 auto;
+    }
+    .gallery .contain-width .image .pic10 img {
+        max-width: 390px;
+        margin: 0 auto
+    }
+    .motive .contain-width{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "waste hunger" "environment environment";
+        
+    }
+}
+@media only screen and (max-width: 1080px){
+    .about .display img {
+        width: 350px;
+        height: 310px;
+    }
+    main .main-internal {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-template-areas: "detail" "form-part";
+        max-width: 768px;
+        margin: 100px auto 0 auto;
+    }
+
+    main #cf-submit{
+        text-align: center;
+    }
+    main .main-internal .detail .detail-footer{
+        text-align: center;
+    }
+    .gallery .contain-width .image img {
+        width: 370px;
+        height: 270px;
+        
+    }
+    .gallery .contain-width .image .pic10 img {
+        max-width: 370px;
+        margin: 0 auto
+    }
+}
+@media only screen and (max-width: 810px){
+    .contain-width{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .about .display img {
+        width: 310px;
+        height: 275px;
+    }
+    .gallery .contain-width .image img {
+        width: 310px;
+        height: 210px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .contain-width{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .about .display {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "part_1" "part_2"
+            "part_3" "part_4";
+    }
+    .about .display img {   
+        width: 270px;
+        height: 240px;
+    }
+    .gallery .contain-width .image {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "pic1" "pic2"
+            "pic3" "pic4"
+            "pic5" "pic6"
+            "pic7" "pic8"
+            "pic9" "pic10";
+        grid-gap: 20px;
+        padding-bottom: 50px;
+    }
+    .motive .contain-width{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "waste" "hunger" "environment";
+        
+    }
+}
+@media only screen and (max-width: 600px){
+    .contain-width{
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+/*responsive end*/
+    </style>
+    <!--css end -->
+
+</head>
+
+<body>
+
+    <!--nav start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+        <div class="container-fluid contain-width">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav margin-left mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link " aria-current="page" id="aboutNav" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="galleryNav" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="donateNav" href="#contact">Sale Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="joinNav" href="#" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="logout">
+                            {% if request.user.is_authenticated %}
+                            <ul class="navbar-nav mr-2 ">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Welcome {{request.user}}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{% url 'Admin' %}">Admin Panel</a>
+                                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                    </div>
+                            </ul>
+                            {% else %}
+                            <!-- <a href="{% url 'logout' %}"> Logout</a> -->
+                            <a class="nav-link" id="AdminNav" href="{% url 'login' %}">LogIn</a>
+    
+                            {% endif%}
+    
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" id="AdminNav" href="{% url 'Admin' %}">Admin Panel</a>
+                    </li> -->
+                </ul>
+                
+                <!-- <div class="text-end">
+                    <div class="logout">
+                        {% if request.user.is_authenticated %}
+                        <ul class="navbar-nav mr-2 ">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Welcome {{request.user}}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'Admin' %}">Admin Panel</a>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                </div>
+                        </ul>
+                        {% else %}
+                        <!-- <a href="{% url 'logout' %}"> Logout</a> -->
+                        <!-- <a class="nav-link" id="AdminNav" href="{% url 'login' %}">LogIn</a>
+
+                        {% endif%}
+
+                    </div> -->
+                <!-- </div> --> -->
+            </div>
+        </div>
+    </nav>
+    <!--nav end-->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <!-- Modal start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Join us for serving people</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="apply-from" method="POST" role="application" action="{% url 'joinUs' %}">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-sm-6 ">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" name="last_name" id="lastName" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="nid" class="form-label">NID </label>
+                            <input type="text" class="form-control" name="nid" id="nid" placeholder="NID no.">
+                            <div class="invalid-feedback">
+                                Please enter valid NID NO.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="vemail" id="vemail" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3 my-3">
+                            <input type="password" class="form-control rounded-4" id="password" name="password"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" name="vaddress" id="vaddress" placeholder="1234 Main St" required="">
+                            <div class="invalid-feedback">
+                                Please enter your address.
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="country" class="form-label">City</label>
+                                <select class="form-select" name="city" id="city" required="">
+                                    <option value="">Choose...</option>
+                                    <option>Chennai</option>
+                                    <option>Coimbatore</option>
+                                    <option>Madurai</option>
+                                    <option>Tiruchirappalli</option>
+                                    <option>Salem	</option>
+                                    <option>Tirunelveli	</option>
+                                    <option>Tiruppur	</option>
+                                    <option>Vellore	</option>
+                                    <option>Thoothukkudi	</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-sm-6">
+                                <label for="zip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" name="zip" id="zip" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Zip code required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-4 input-type">
+                            <label for="describe" class="form-label">Describe yourself</label>
+                            <textarea rows="6" placeholder="Are you ready to become a volunteer & server the needy?" class="form-control" name="describe"
+                                id="describe" required=""></textarea>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="notification" checked>
+                            <label for="notification">Send me special deals to my inbox</label>
+                        </div>
+                        <div class="below-form">
+                            By logging in, you accept our <a href="#">Terms of Use</a>, and <a href="#"> Privacy</a>& <a
+                                href="#">Cookies</a> Statement.
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Join now</button>
+                        </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!--Modal end-->
+
+    <!--save live part start-->
+    <div class="save-live-part">
+        <div class="contain-width">
+            <div class="row">
+                <div class="col-7">
+                    <div class="header-part">
+                        <h1>Welcome to<span style="color: pink;"> FARM TECH</span></h1>
+                        <span class="below-header">Avoid Organic Waste</span>
+                    </div>
+                    <p>We can be leaders in our communities by collecting unspoiled, healthy food and donating it to our neighbors in need. By donating food, we’re feeding people, not landfills, supporting local communities, and saving all the resources that went into producing that food from going to waste.</p>
+                    <a href="">Search Foods</a>
+                </div>
+                <div class="col-5">
+                    <img src="../static/Picture/foods.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--save live part end-->
+
+    <!--About US Start-->
+    <div class="about" id="about">
+        <div class="contain-width">
+            <div class="row">
+                <h2>About US</h2>
+                <p>Food rescue, or food recovery, is the practice of collecting high-quality food that would otherwise go to waste and distributing it to people facing hunger. We work with manufacturers, retailers, and farmers to reduce food waste and get rescued food to people in need</p>
+            </div>
+            <div class="row display">
+                <div class="part_1 part">
+                    <div class="upper">
+                        <img src="../static/Picture/DeliveringFood.jpg" alt="">
+                    </div>
+                    <div class="below">
+                        <h3>What We Do</h3>
+                        <p>We prevent perfectly good food from entering the waste stream by redirecting it to those who are experiencing food insecurity.</p>
+                    </div>
+                </div>
+                <div class="part_2 part">
+                    <div class="upper">
+                        <img src="../static/Picture/SVFamilyCenter.jpg" alt="">
+                    </div>
+                    <div class="below">
+                        <h3>Our Impact</h3>
+                        <p>We’ve proven that food rescue is about way more than just food.</p>
+                    </div>
+                </div>
+                <div class="part_3 part">
+                    <div class="upper">
+                        <img src="../static/Picture/Staff.jpg" alt="">
+                    </div>
+                    <div class="below">
+                        <h3>Staff & Board</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, voluptate quam! Dolorem
+                            pariatur amet laborum!.</p>
+                    </div>
+                </div>
+                <div class="part_4 part">
+                    <div class="upper">
+                        <img src="../static/Picture/van.jpg" alt="">
+                    </div>
+                    <div class="below">
+                        <h3>Careers</h3>
+                        <p>The ultimate way to take action: work with us!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <span><a href="">Discover more Plans</a></span>
+            </div>
+        </div>
+    </div>
+    <!--About US End-->
+
+    <!--gallery start-->
+    <div class="gallery" id="gallery">
+        <div class="contain-width">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+            <div class="image">
+                <div class="rooted pic1">
+                    <img src="../static/Picture/food1.jpg" alt="">
+                </div>
+                <div class="rooted pic2">
+                    <img src="../static/Picture/food2.jpg" alt="">
+                </div>
+                <div class="rooted pic3">
+                    <img src="../static/Picture/food3.jpg" alt="">
+                </div>
+                <div class="rooted pic4">
+                    <img src="../static/Picture/food4.jpg" alt="">
+                </div>
+                <div class="rooted pic5">
+                    <img src="../static/Picture/food5.jpg" alt="">
+                </div>
+                <div class="rooted pic6">
+                    <img src="../static/Picture/275006937_4939245346110583_8496229700628778509_nn.jpg" alt="">
+                </div>
+                <div class="rooted pic7">
+                    <img src="../static/Picture/food6.webp" alt="">
+                </div>
+                <div class="rooted pic8">
+                    <img src="../static/Picture/food7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--gallery end-->
+
+    <!--contact part start-->
+    <div class="main-part" id="contact">
+        <main class="contain-width">
+            <div class="main-head">
+                <h1>Place ordering...</h1>
+                <p>Upload here your Food </p>
+            </div>
+            <hr class="main-hr">
+            <div class="main-internal">
+
+                <div class="form-part">
+                    <div class="contact-form col-md-6 ">
+                        <form id="apply-from" method="POST" role="application" action="{% url 'Donate' %}">
+                             {% csrf_token %}
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Resturant/Organization/Anyone Donate"
+                                    class="form-control" name="dname" id="dname" required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <input type="email" placeholder="Email" class="form-control" name="email" id="email"
+                                    required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Food Type" class="form-control" name="FoodT"
+                                    id="FoodT" required="">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Food Quantity" class="form-control" name="FoodQ"
+                                    id="FoodQ" required="">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Address" class="form-control" name="address"
+                                    id="address" required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Phone Number" class="form-control" name="phone"
+                                    id="phone" required="">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Type of prize for food" class="form-control" name="phone"
+                                    id="phone" required="">
+                            </div>
+                            <div id="cf-submit">
+                                <input type="submit" id="contact-submit" class="submit-btn" value="Donate Now">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--contact part end-->
+
+    <!--motive start-->
+    <div class="motive">
+        <div class="contain-width">
+            <div class="waste">
+                <img src="../static/Picture/icon1.png" alt="">
+                <h3>We fight food waste:</h3>
+                <p>Up to 40% of food that is produced is wasted.</p>
+            </div>
+            <div class="hunger">
+                <img src="../static/Picture/icon2.png" alt="">
+                <h3>We fight hunger:</h3>
+                <p>1 in 7 people goes hungry every day.</p>
+            </div>
+            <div class="environment">
+                <img src="../static/Picture/icon3.png" alt="">
+                <h3>We protect the environment:</h3>
+                <p>prevents greenhouse gases derived from food decomposing in landfills.</p>
+            </div>
+        </div>
+    </div>
+    <!--motive end-->
+
+    <!--footer part end-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

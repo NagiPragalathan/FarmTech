@@ -1,0 +1,350 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../../fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../fonts/Manrope-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../fonts/Manrope-ExtraLight.woff2") format("woff2");
+  font-weight: 100;
+}
+
+html {
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  -webkit-text-size-adjust: 100%;
+  image-rendering: crisp-edges;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  color: $color-gray;
+  // color: rgb(207, 92, 92);
+  font-weight: $font-light;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+// Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  line-height: 1.25;
+  font-weight: $font-semibold;
+  color: $color-black;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Larger than phablet */
+@media (min-width: $screen-sm) {
+  h1 {
+    font-size: 3rem;
+  }
+  h1.jumbo {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-top: $spacing-sm;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+p {
+  margin-bottom: $spacing-md;
+  margin-top: 0;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+}
+
+.kicker {
+  text-transform: uppercase;
+  color: $color-primary;
+  font-weight: $font-regular;
+  font-size: $font-size-sm !important;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-sm;
+  font-family: monospace;
+}
+
+// Header
+
+header {
+  padding-bottom: $spacing-xxl;
+
+  #navbar {
+    .logo {
+      max-width: 100px;
+    }
+  }
+}
+
+// Hero
+
+#hero {
+  padding: 0 0 $spacing-xxl 0;
+  background-image: $gradient-primary;
+
+  .hero-img {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 1rem;
+    animation: fadeInUp 600ms 0.2s;
+    animation-fill-mode: both;
+  }
+
+  h1 {
+    color: #fff;
+    animation: fadeInUp 600ms 0.2s;
+    animation-fill-mode: both;
+  }
+
+  p {
+    font-size: $font-size;
+    animation: fadeInUp 600ms 0.2s;
+    animation-fill-mode: both;
+  }
+
+  .btn {
+    animation: fadeInUp 600ms 0.2s;
+    animation-fill-mode: both;
+    &.btn-secondary {
+      color: white;
+      border-color: white;
+      &:hover {
+        background-color: white;
+        border-color: white;
+        color: $color-black;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $screen-sm) {
+  header {
+    padding-bottom: $spacing-xl;
+  }
+  #hero {
+    padding: 0 0 $spacing-xl 0;
+
+    .hero-img {
+      max-width: 65%;
+      margin-top: $spacing-md;
+    }
+  }
+}
+
+// Trusted By
+
+#trusted {
+  padding: $spacing-lg 0;
+  background: $color-neautral;
+
+  a {
+    padding: 0 $spacing-md;
+    display: block;
+    color: $color-gray;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+@media all and (max-width: $screen-sm) {
+  #trusted {
+    a {
+      svg {
+        display: block;
+        max-width: 140px;
+        margin: 0 auto;
+        margin-bottom: $spacing-sm;
+      }
+    }
+
+    .row {
+      display: block !important;
+    }
+  }
+}
+
+// Intro
+
+#intro {
+  padding: $spacing-xxl 0;
+
+  .img-right {
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-left: auto;
+  }
+}
+
+@media all and (max-width: $screen-sm) {
+  #intro {
+    padding: $spacing-xl 0;
+  }
+}
+
+// Features
+
+#features {
+  padding: 0 0 $spacing-xxl 0;
+
+  .img-left {
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-right: auto;
+  }
+}
+
+@media all and (max-width: $screen-sm) {
+  #features {
+    padding: 0 0 $spacing-xl 0;
+  }
+}
+
+// Pricing
+
+#pricing {
+  padding: $spacing-xxl 0;
+  background: $color-neautral;
+}
+
+@media all and (max-width: $screen-sm) {
+  #pricing {
+    padding: $spacing-xl 0;
+  }
+}
+
+// CTA
+
+#cta {
+  background: $color-neautral;
+  padding: $spacing-lg 0;
+}
+
+// Footer
+
+footer {
+  padding: $spacing-xl 0;
+  background: $gradient-primary;
+
+  h3 {
+    font-size: $font-size-sm;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-bottom: $spacing-md;
+      a {
+        color: $color-gray;
+        text-decoration: none;
+        font-size: $font-size-sm;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+
+    &.social {
+      li {
+        display: inline;
+        margin-right: $spacing-sm;
+        a {
+          color: white;
+          svg {
+            max-width: 25px;
+          }
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    max-width: 100px;
+    margin-bottom: $spacing-sm;
+  }
+}

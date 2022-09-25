@@ -1,0 +1,54 @@
+.btn {
+    display: inline-block;
+    color: black;
+    background-color: $color-gray;
+    border-color: $color-gray;
+    text-align: center;
+    font-weight: 400;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid $color-gray;
+    padding: $spacing-sm $spacing-md;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 6px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 0.25rem;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+
+    &:focus {
+        outline: 2px solid $color-primary;
+      }
+
+      &.full-width {
+        width: 100%;
+      }
+
+    &.btn-primary {
+        color: #fff;
+        background-color: $color-primary;
+        border-color: $color-primary;
+        &:hover {
+          background-color: darken($color-primary, 10%);
+          border-color: darken($color-primary, 10%);
+        }
+      }
+    
+      &.btn-secondary {
+        color: $color-primary;
+        background-color: transparent;
+        border-color: $color-primary;
+        &:hover {
+          background-color: $color-primary;
+          border-color: $color-primary;
+          color: #fff;
+        }
+      }
+}

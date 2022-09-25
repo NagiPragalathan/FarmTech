@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>ChatBot</title>
+	<link rel="stylesheet" href="{% static 'chatbot/css/style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="chat">
+			<div class="chat-header">
+				<div class="profile">
+					<div class="left">
+						<a href="/"><img src="{% static 'chatbot/img/arrow.png' %}" class="arrow"></a>
+						<img src="{% static 'chatbot/img/chatbot.jpg' %}" class="pp">
+						<h2>Kitty</h2>
+						<span>Active 24/7</span>
+					</div>
+					<div class="right">
+						<a href="/"><img src="{% static 'chatbot/img/btn1.png' %}" class="icon"></a>
+					</div>
+				</div>
+			</div>
+			<div class="chat-box" id="chat-box">
+				{% autoescape off %}
+					{{ codes }}
+			 	{% endautoescape %}
+			</div>
+
+			<div class="chat-footer">
+				<form action="" style="display: flex;">
+					<input type="text" name="input" id="" placeholder="Enter any Quesions" class="textarea" autocomplete="off"/>
+					<div class="icons">
+					</div>
+	<input type="submit" value=" " class="mic" name = "submit" style="background-image: url('{% static 'chatbot/img/send.gif' %}');">
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	const messages = document.getElementById('chat-box');
+
+	function scrollToBottom() {
+		messages.scrollTop = messages.scrollHeight;
+	  }
+	  
+	  scrollToBottom();
+	console.log("work")
+	  
+</script>
+</html>

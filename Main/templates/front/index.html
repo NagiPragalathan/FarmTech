@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FARM-TECH</title>
+
+    <link rel="stylesheet" href="{% static 'front/css/styles.min.css' %}" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+  <body onload="chatbot">
+    <!-- Hero -->
+    <section id="hero">
+      <!-- Header -->
+      <header>
+        <div class="container">
+          <div id="navbar">
+            <!-- <img src="img/logo-placeholder.svg" class="logo" alt="logo" /> -->
+            <p style="color: #fff; margin-bottom: 0px">FARM-TECH</p>
+            <nav>
+              <ul>
+                <li><form action="Agri" method="get">
+                <input type="text" name="inp" placeholder="Type here any doughs..." style="font-size: 100%;
+                  border: 2px solid #595b61;
+                  line-height: 1.15;
+                  margin: 0;
+                  border-radius: 12px;
+                  padding: 9px;">
+                  <input type="submit" value=">>" name="sub" style="    width: 39px;
+                  height: 36px;
+                  border-radius: 18px;    background-color: antiquewhite;
+">
+              </form>
+                </li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="http://localhost:8501/">Stats</a></li>
+                <li>
+                  <a href="https://poetic-queijadas-7d7e81.netlify.app/"
+                    >Crop-Cart</a
+                  >
+                </li>
+                <!-- <li><a href="#">Team</a></li> -->
+                <li><a href="Donate">Sale Food</a></li>
+                <li><a href="login">Community</a></li>
+                <li><a href="chatbot">Chatbot</a></li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="kicker">One App for all Agri-Issues</p>
+            <h1 class="jumbo">Agri Data Analysis <br />Production & Sales.</h1>
+
+            <p>
+              Agriculture website for all agricultural related issues and
+              selling products directly.
+            </p>
+
+            <a
+              href="https://poetic-queijadas-7d7e81.netlify.app/"
+              class="btn btn-primary mr-sm"
+              ><i class="fa-solid fa-cart-shopping"></i> &nbsp;Crop-Cart</a
+            >
+            <a
+              href="http://localhost:8501/"
+              class="btn btn-secondary"
+              ><i class="fa-solid fa-chart-column"></i> &nbsp;Agri-stats</a
+            >
+            <a
+              href="chat_lobby"
+              class="btn btn-secondary"
+              ><i class="fa-sharp fa-solid fa-video"></i>&nbsp; Make Meeting</a
+            >
+          </div>
+
+          <div class="col-sm-6">
+            <img
+              src="https://images.pexels.com/photos/207247/pexels-photo-207247.jpeg?auto=compress&cs=tinysrgb&w=600"
+              class="hero-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{ static 'front/js/main.js' %}"></script>
+    <script>    $(document).on("click", ".naccs .menu div", function() {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+          $(".naccs .menu div").removeClass("active");
+          $(".naccs ul li").removeClass("active");
+
+          $(this).addClass("active");
+          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+          var listItemHeight = $(".naccs ul")
+            .find("li:eq(" + numberIndex + ")")
+            .innerHeight();
+          $(".naccs ul").height(listItemHeight + "px");
+        }
+    });</script>
+  </body>
+</html>
