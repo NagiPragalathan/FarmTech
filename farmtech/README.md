@@ -7,13 +7,6 @@
 2. Run `pip install -r requirements.txt` to install the required dependencies
 3. Run `streamlit run farmtech.py` and copy the URL to your web browser
 
-## How to Run Locally (Windows)
-
-1. Clone this repository
-2. Install Anaconda/Miniconda, then create a conda environment
-3. Activate the virtual environment, then run `conda install -c conda-forge --file requirements.txt` to install the required dependencies
-4. Run `streamlit run farmtech.py` and copy the URL to your web browser
-
 ## Abstract
 Farmtech is a tool that aims to help the Tamilnadu farming community optimize crop production. The global demand for food greatly outstrips that for supply, and there is an urgent need for interventions to address this balance. 
 
