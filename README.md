@@ -12,7 +12,10 @@
 1. Clone this repository
 2. Install Anaconda/Miniconda, then create a conda environment
 3. Activate the virtual environment, then run `conda install -c conda-forge --file requirements.txt` to install the required dependencies
-4. Run `streamlit run farmtech.py` and copy the URL to your web browser
+4. open two terminals 
+5. one for run Django framework. `cd Main` and `python manage.py runserver`
+6. another one for streamlit. 'cd farmtech` and Run `streamlit run farmtech.py` 
+7. And copy the URL`http://127.0.0.1:8000/` to your web browser
 
 ## Abstract
 Farmtech is a tool that aims to help the Tamilnadu farming community optimize crop production. The global demand for food greatly outstrips that for supply, and there is an urgent need for interventions to address this balance. 
