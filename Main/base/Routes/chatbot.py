@@ -1,13 +1,16 @@
+from http.client import HTTPResponse
 from pyexpat.errors import messages
 from django.shortcuts import render
 import requests
 import wikipedia
 from gtts import gTTS
 from bs4 import BeautifulSoup
-import playsound, os
+from gtts import gTTS
+from io import BytesIO
+from pygame import mixer
+import time
 import threading
 from datetime import datetime
-import pywhatkit
 from random import choice
 messages = []
 dic = {"hello" : ["hi, it's really good to hear form you, i hope you are doing well","hey.there how can i help you"],
@@ -16,16 +19,25 @@ dic = {"hello" : ["hi, it's really good to hear form you, i hope you are doing w
 def cource(request):
     return render(request,'cources\school_education\simple.html')
 
-def speak(text,Lang):
-    try :
-        tts = gTTS(text=text, lang=Lang)
-        filename = "abc.mp3"
-        tts.save(filename)
-        playsound.playsound(filename)
-        os.remove(filename)
-    except :
-       pass       
-        
+def bot(request):
+    return render(request,'chatbot/newindex1.html')
+
+def get_username(request):
+    name = request.POST['usr_name']
+    mail = request.GET.post['email']
+    print(name)
+    return render(request,'chatbot/newindex1.html')
+    
+
+def speak(text):
+    mixer.init()
+    mp3_fp = BytesIO()
+    tts = gTTS(text, lang='en')
+    tts.write_to_fp(mp3_fp)
+    mp3_fp.seek(0)
+    mixer.music.load(mp3_fp, "mp3")
+    mixer.music.play()
+    time.sleep(5)
 
 def scrping(Text, paraLen):
         
@@ -61,7 +73,7 @@ def scrping(Text, paraLen):
                 data : str = ''
                 for data in soup.find_all("p"):
                     output.append(data.get_text())
-            return output[5:10][paraLen]
+            return output[paraLen]
         except:
             return "ScripeError"
 
@@ -87,12 +99,12 @@ def chatbot(request):
     print(replay)
     if(replay == None):
         if usr_input != None :
-            replay = WebScrap(usr_input,1)
+            replay = WebScrap(usr_input,4)
             if replay:
                 print("webscrap worked....")
                 pass
             else :
-                replay = scrping(usr_input,1)
+                replay = scrping(usr_input,4)
         elif(usr_input == None) :
             replay = ""
         messages.append(replay)
@@ -127,10 +139,8 @@ def chatbot(request):
                 makefullcode = makefullcode + system_
     frontend = {"codes":makefullcode}
     def say():
-        try:
-            speak(messages[-1],"en")
-        except:
-            pass
+        print("say function ",messages[::-1][0])
+        speak(str(messages[::-1][0]))
     t1 = threading.Thread(target=say)
     t1.setDaemon(False)
     t1.start()

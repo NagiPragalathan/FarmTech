@@ -104,4 +104,10 @@ class Volunteer(models.Model):
     def __str__(self):
         return self.vemail
 
+class chatbot_members(models.Model):
+    name = models.CharField(max_length=50)
+    mail = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 

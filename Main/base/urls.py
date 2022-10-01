@@ -46,6 +46,9 @@ profile = [
 Chatbot = [
     path('chatbot', chatbot.chatbot),
     path('cource', chatbot.cource),
+    path('bot', chatbot.bot),
+    path('get_username', chatbot.get_username),
+
 ]
 
 #Adding all paths to main path
