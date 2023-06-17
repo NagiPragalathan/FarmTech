@@ -1,5 +1,6 @@
 # Farmtech
-> _A tool to help the Tamilnadu farming community to optimize crop production_
+> _A tool to help the Tamilnadu farming community to optimize crop production .
+
 
 ## How to Run Locally (OS X)
 
